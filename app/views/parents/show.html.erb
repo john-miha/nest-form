@@ -1,0 +1,9 @@
+<h1>parent_id: <%= @parent.id %></h1>
+
+<p><%= @parent.parentname %>の子</p>
+<% @parent.childs.each do |child| %>
+    <span><%= child.childname %></span>
+    <br>
+<% end %>
+
+<%= link_to '新規作成に戻る', new_parent_path %>

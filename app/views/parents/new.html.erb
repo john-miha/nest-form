@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>ネストしたフォーム</title>
+</head>
+<body>
+
+<p>ネストしたフォーム</p>
+
+<%= form_with(model: @parent, url: parents_path) do |f| %>
+    <%= f.label :parentname, "親の名前" %>
+    <%= f.text_field :parentname %><br>
+    <%= f.label :childname, "子の名前" %>
+    <%= text_field_tag :childname %><br>
+    <%= f.submit 'submit' %>
+<% end %>
+
+</body>
+</html>

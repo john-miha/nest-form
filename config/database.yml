@@ -51,5 +51,5 @@ test:
 production:
   <<: *default
   database: nest_form_production
-  username: nest_form
-  password: <%= ENV['NEST_FORM_DATABASE_PASSWORD'] %>
+  username: dbuser
+  password: dbpass
